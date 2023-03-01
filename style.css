@@ -17,7 +17,7 @@ body {
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(images/background02.jpg);
+    background-image: url(images/back1.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -36,6 +36,7 @@ nav {
 .logo {
     width: 200px;
     transition: transform 0.5s;
+    
     
 }
 
@@ -101,6 +102,7 @@ nav ul li a:hover::after {
     color: #ff004f;
     font-family: 'Calistoga', cursive;
     transition: transform 0.5s;
+    
 }
 
 .header-text h1 span:hover {
@@ -132,6 +134,7 @@ nav ul li a:hover::after {
     width: 100%;
     border-radius: 16px;
     transition: transform 0.5s;
+    animation: glowing 1300ms infinite;
 }
 
 .about-col-1:hover img {
@@ -336,20 +339,21 @@ nav ul li a:hover::after {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+
     padding: 14px 50px;
-    border-radius: 6px;
+    border-radius: 27px;
     text-decoration: none;
-    color: #323d4c;
+    color: #fff;
+    background-color: #323d4c;
     transition: transform 0.5s;
+    animation: glowing 1300ms infinite;
+    
 }
 
 .btn:hover {
-    background: #ff004f;
     transform: translateY(-5px);
-
-
 }
+
 
 /*-----poem-----*/
 .poem {
@@ -443,11 +447,21 @@ nav ul li a:hover::after {
     transform: translateY(-5px);
 }
 
-.btn.btn2 {
-    display: inline-block;
-    background: #ff004f;
+.btn-btn2{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 0px;
+    padding: 14px 50px;
+    border-radius: 27px;
+    text-decoration: none;
     color: #fff;
-    margin: 15px;
+    transition: transform 0.5s;
+    cursor: pointer;
+    animation: glowing 1300ms infinite;
+}
+.btn-btn2:hover{
+    transform: translateY(-5px);
 }
 
 .contact-right form {
@@ -489,6 +503,21 @@ form btn2 {
 nav .fa-solid {
     display: none;
 }
+
+@keyframes glowing {
+    0% {
+      background-color: #ff004f;
+      box-shadow: 0 0 5px  #ff004f;
+    }
+    50% {
+      background-color:  #ff004f;
+      box-shadow: 0 0 20px  #ff004f;
+    }
+    100% {
+      background-color:  #ff004f;
+      box-shadow: 0 0 5px  #ff004f;
+    }
+  }
 
 @media only screen and (max-width: 600px) {
     #header {
