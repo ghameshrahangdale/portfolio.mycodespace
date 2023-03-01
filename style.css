@@ -15,9 +15,9 @@ body {
 }
 
 #header {
+    background-image: url(images/back1.jpg);
     width: 100%;
     height: 100vh;
-    background-image: url(images/back1.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -36,8 +36,8 @@ nav {
 .logo {
     width: 200px;
     transition: transform 0.5s;
-    
-    
+    animation: floatImage 4s ease-in-out infinite;
+    animation-delay: 3s;
 }
 
 .logo:hover {
@@ -59,10 +59,13 @@ nav ul li a {
     position: relative;
     font-family: 'Niconne', cursive;
     font-weight: 2px;
+    transition: color 0.5s;
 }
 
 nav ul li a:hover {
     color: #ff004f;
+    text-shadow: 1px 1px 1px #323d4c;
+
 }
 
 nav ul li a::after {
@@ -99,25 +102,29 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color: #ff004f;
-    font-family: 'Calistoga', cursive;
+    background: linear-gradient(to right, #4ADEDD,#1B4A9B);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: 'Lobster', cursive;
     transition: transform 0.5s;
+    
+    
     
 }
 
 .header-text h1 span:hover {
-    background: linear-gradient(to right, #f32170, #ff6b08,
-            red, #eedd44,#323d4c);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
     transform: translateY(-5px);
     transition: transform 0.5s;
+    
 }
 
 /*-------------about--------*/
 #about {
     padding: 80px 0;
     color: #323d4c;
+    background-image: url(images/background-wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .row {
@@ -134,13 +141,15 @@ nav ul li a:hover::after {
     width: 100%;
     border-radius: 16px;
     transition: transform 0.5s;
-    animation: glowing 1300ms infinite;
+    
+    animation: glowing 1300ms infinite , floatImage 4s ease-in-out infinite;
+    animation-delay: 3s;
 }
 
-.about-col-1:hover img {
+/* .about-col-1:hover img {
     transform: scale(1.1);
     transition: transform 0.5s;
-}
+} */
 
 .about-col-2 {
     flex-basis: 60%;
@@ -189,39 +198,45 @@ nav ul li a:hover::after {
     width: 50%;
 }
 
-.tab-contets ul li {
+.tab-contents ul li {
     list-style: none;
     margin: 10px 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
 
-.tab-contets ul li span {
+.tab-contents ul li span {
     color: #ff004f;
     font-size: 20px;
     font-family: 'Niconne', cursive;
 }
 
-.tab-contets {
+.tab-contents {
     display: none;
 }
 
-.tab-contets.active-tab {
+.tab-contents.active-tab{
     display: block;
 }
 
 
 
 /*--------services--------*/
-#services {
+.services {
     padding: 30px 0;
+    width: 100%;
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
 }
+
 
 .services-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
+    
 }
 
 .services-list div {
@@ -266,6 +281,7 @@ nav ul li a:hover::after {
 /*portfolio-----------*/
 #portfolio {
     padding: 50px 0;
+    
 }
 
 .work-list {
@@ -370,11 +386,14 @@ nav ul li a:hover::after {
     text-align: center;
     padding-top: 15%;
     font-family: 'Niconne', cursive;
+    cursor: pointer;
+    transition: color 0.5s;
 }
 
-/* .poem h1:hover{
-    color: #323d4c;
-} */
+.poem h1:hover{
+    color: red;
+    text-shadow: 1px 1px 1px #323d4c;
+}
 .poem p {
     font-size: 30px;
     color: #323d4c;
@@ -382,10 +401,20 @@ nav ul li a:hover::after {
     margin-top: 20px;
     font-family: 'Niconne', cursive;
     margin-left: 25;
+    transition: color 0.5s;
+}
+.poem p:hover{
+    color: red;
+    text-shadow: 1px 1px 1px #323d4c;
+
 }
 
-
 /*----------Contact-------------*/
+#contact{
+    background-image: url(images/background-wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+}
 .contact-left {
     flex-basis: 35%;
     padding: 5%;
@@ -518,6 +547,18 @@ nav .fa-solid {
       box-shadow: 0 0 5px  #ff004f;
     }
   }
+
+@keyframes floatImage{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+    0% {
+        transform: translateY(0);
+    }
+}
 
 @media only screen and (max-width: 600px) {
     #header {
