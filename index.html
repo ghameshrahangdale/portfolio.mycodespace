@@ -12,10 +12,11 @@
     <!--fontawesom for icons-------------------------------->
     <script src="https://kit.fontawesome.com/f1d5e702e9.js" crossorigin="anonymous"></script>
 
-     <!--Google font------------->
+    <!--Google font------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Fredoka+One&family=Lobster&family=Niconne&family=Righteous&family=Satisfy&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Calistoga&family=Fredoka+One&family=Lobster&family=Niconne&family=Righteous&family=Satisfy&display=swap"
         rel="stylesheet">
 
     <!--favicon------------>
@@ -26,6 +27,10 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
+
+
+
 </head>
 
 <body>
@@ -46,7 +51,7 @@
             </nav>
             <div class="header-text">
                 <p>Welcome you!</p>
-                <h1>Greetings Everyone, <br> I'm <span>Ghamesh Rahangdale</span><br>Softeware Engineer</h1><br>
+                <h1>Greetings Everyone, <br> I'm <span class="multiple-text"></span><br>Softeware Engineer</h1><br>
                 <p>Always be yourself, unless you can be unicorn🦄🌈</p>
                 <p>#GreatSpirit</p>
             </div>
@@ -76,7 +81,7 @@
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contets active-tab" id="skills">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Web Developer</span><br>UI Designing with HTML, CSS, XML</li>
                             <li><span>Java Prodramming</span><br>Certification from Coding Ninjas</li>
@@ -86,14 +91,14 @@
 
                         </ul>
                     </div>
-                    <div class="tab-contets" id="experience">
+                    <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>Fresher/Looking for work</span><br>Yet to interact with the industry</li>
 
-                            <li><span>Projects</span><br>Built some major and minor peojects</li>
+                            <li><span>Projects</span><br>Built some major and minor projects</li>
                         </ul>
                     </div>
-                    <div class="tab-contets" id="education">
+                    <div class="tab-contents" id="education">
                         <ul>
                             <li><span>Computer Science and Engineering</span><br>Trailing-RTMNU</li>
                             <li>
@@ -298,6 +303,18 @@
                 .catch(error => console.error('Error!', error.message))
         })
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".multiple-text", {
+            strings: ["Ghamesh Rahangdale", "Frontend web Developer ", "Android develper ","Graphics Designer ","Snehal "],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backdelay: 1000,
+            loop: true
+        })
+    </script>
+
 
 </body>
 
