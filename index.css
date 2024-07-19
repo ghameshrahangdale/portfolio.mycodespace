@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+.wrapper-container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header{
+    width: 100%;
+}
