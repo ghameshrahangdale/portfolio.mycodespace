@@ -1,0 +1,35 @@
+@media screen and (max-width: 800px) {
+    .navigation{
+        display: none;
+    }
+
+    .highlight-container{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .highlight{
+        margin-bottom: 10px;
+    }
+
+    .logo h1{
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+
+    #reach-out-btn{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 414px){
+    #react-out-btn{
+        font-size: 0.5rem;
+        margin-right: 20px;
+
+    }
+
+}
